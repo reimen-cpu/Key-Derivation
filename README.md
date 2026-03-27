@@ -4,87 +4,87 @@
 ![CustomTkinter](https://img.shields.io/badge/UI-CustomTkinter-00c9a0.svg)
 ![Cryptography](https://img.shields.io/badge/Security-Cryptography-red.svg)
 
-**MasterKey Derivator** es una herramienta de escritorio moderna y segura diseñada para generar contraseñas (claves criptográficas) **determinísticas** a partir de una contraseña maestra y una frase de *salt*. 
+**MasterKey Derivator** is a modern and secure desktop tool designed to generate **deterministic** passwords (cryptographic keys) from a master password and a *salt* phrase.
 
-En lugar de guardar tus contraseñas en un gestor (donde la base de datos puede ser vulnerada), esta aplicación **calcula** matemáticamente la misma contraseña compleja cada vez que introduces los mismos datos de entrada. Tus claves solo existen en la memoria RAM mientras usas la app.
+Instead of storing your passwords in a manager (where the database can be compromised), this application **mathematically computes** the same complex password every time you enter the same input data. Your keys only exist in RAM while using the app.
 
 ---
 
-## ✨ Características Principales
+## ✨ Key Features
 
-* **Interfaz Moderna (Dark Mode):** Construida desde cero con `CustomTkinter` para una experiencia de usuario fluida y visualmente atractiva.
-* **Alta Seguridad Criptográfica:** Utiliza algoritmos robustos recomendados por la industria, resistentes a ataques por fuerza bruta con hardware especializado (ASICs/GPUs):
-  * *Scrypt* (Recomendado)
+* **Modern Interface (Dark Mode):** Built from scratch with `CustomTkinter` for a smooth and visually appealing user experience.
+* **High Cryptographic Security:** Uses industry-recommended robust algorithms, resistant to brute-force attacks with specialized hardware (ASICs/GPUs):
+  * *Scrypt* (Recommended)
   * *PBKDF2-HMAC-SHA512*
-  * *SHA3-512 Iterativo*
-* **Medidor de Entropía en Tiempo Real:** Evalúa visualmente la fuerza de tu contraseña maestra mientras escribes.
-* **Sistema de Contextos:** Genera contraseñas diferentes para distintos sitios (ej. `twitter`, `banco`, `ssh`) usando exactamente las mismas credenciales maestras.
-* **Verificación de Claves:** Una pestaña dedicada para comprobar de forma segura que la clave generada coincide con la esperada.
+  * *Iterative SHA3-512*
+* **Real-Time Entropy Meter:** Visually evaluates the strength of your master password as you type.
+* **Context System:** Generates different passwords for different sites (e.g., `twitter`, `bank`, `ssh`) using exactly the same master credentials.
+* **Key Verification:** A dedicated tab to securely check that the generated key matches the expected one.
 
 ---
 
-## 🚀 Instalación y Uso
+## 🚀 Installation and Usage
 
-Sigue estos pasos para clonar el repositorio y ejecutar la aplicación en tu entorno local.
+Follow these steps to clone the repository and run the application locally.
 
-### 1. Clonar el repositorio
+### 1. Clone the repository
 
 ```bash
 git clone https://github.com/reimen-cpu/Key-Derivation.git
 cd Key-Derivation
 ````
 
-### 2. Crear un Entorno Virtual (Recomendado)
+### 2. Create a Virtual Environment (Recommended)
 
-Para evitar conflictos con otras librerías de tu sistema y el error de "externally-managed-environment":
+To avoid conflicts with other libraries on your system and the "externally-managed-environment" error:
 
-**En Linux / macOS:**
+**On Linux / macOS:**
 
 ```bash
 python3 -m venv venv
 source venv/bin/activate
 ```
 
-**En Windows (PowerShell / CMD):**
+**On Windows (PowerShell / CMD):**
 
 ```bash
 python -m venv venv
 venv\Scripts\activate
 ```
 
-### 3. Instalar dependencias
+### 3. Install dependencies
 
-Con el entorno virtual activado:
+With the virtual environment activated:
 
 ```bash
 pip install cryptography customtkinter
 ```
 
-### 4. Ejecutar la aplicación
+### 4. Run the application
 
 ```bash
 python3 Key-Derivation.py
 ```
 
-*(En Windows puede ser solo `python` en lugar de `python3`).*
+*(On Windows, `python` may be sufficient instead of `python3`).*
 
 ---
 
-## 📖 Guía de Uso Rápido
+## 📖 Quick Usage Guide
 
-1. **Contraseña Principal:** Ingresa una contraseña maestra fuerte.
-2. **Frase de Salt:** Ingresa una segunda frase (salt criptográfico). Debes recordarla; un cambio aunque sea de un carácter genera una clave distinta.
-3. **Contexto (Opcional):** Nombre del servicio o propósito de la clave (ej. `facebook`, `vpn-trabajo`) para generar claves únicas.
-4. **Configuración:** Elige el algoritmo (recomendado Scrypt), la longitud de la clave y el formato de salida (Base64 recomendado para uso en webs).
-5. **Generar Master Key:** Haz clic en el botón y usa "Copiar" para llevarla al portapapeles.
-
----
-
-## ⚠️ Aviso de Privacidad y Seguridad
-
-Esta aplicación **NO guarda ni transmite ningún dato**. No hay bases de datos, archivos ocultos, telemetría ni conexión a internet. Toda la derivación criptográfica se realiza **localmente en RAM**. Guarda tu contraseña maestra y tu frase de salt de forma segura; sin ellas será imposible regenerar tus claves.
+1. **Master Password:** Enter a strong master password.
+2. **Salt Phrase:** Enter a second phrase (cryptographic salt). You must remember it; even a single-character change produces a completely different key.
+3. **Context (Optional):** Name the service or purpose of the key (e.g., `facebook`, `vpn-work`) to generate unique keys for each.
+4. **Settings:** Choose the algorithm (Scrypt recommended), key length, and output format (Base64 recommended for web use).
+5. **Generate Master Key:** Click the button and use "Copy" to place it in your clipboard.
 
 ---
 
-**Desarrollado por reimen-cpu**
+## ⚠️ Privacy and Security Notice
+
+This application **does NOT store or transmit any data**. There are no databases, hidden files, telemetry, or internet connections. All cryptographic derivation is performed **locally in RAM**. Keep your master password and salt phrase secure; without them, regenerating your keys is mathematically impossible.
+
+---
+
+**Developed by reimen-cpu**
 
