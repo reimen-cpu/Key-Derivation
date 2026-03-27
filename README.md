@@ -1,4 +1,3 @@
-````markdown
 # 🛡️ MasterKey Derivator v3.0
 
 ![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)
@@ -88,7 +87,4 @@ Esta aplicación **NO guarda ni transmite ningún dato**. No hay bases de datos,
 ---
 
 **Desarrollado por reimen-cpu**
-
-```
-```
 
